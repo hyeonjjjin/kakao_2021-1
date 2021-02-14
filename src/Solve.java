@@ -16,7 +16,7 @@ class Solve {
         //3단계
         int dot=new_id.indexOf('.');
         int dotdot =dot;
-        String temp_id = new_id;
+        String temp_id = new_id+'\0';
         //String tmp = "";
         while(dot>0){
             while(temp_id.charAt(1+dotdot)=='.') {System.out.println("ovo"); dotdot++; }//dotdot++;//{dotdot+=1;}
@@ -25,11 +25,13 @@ class Solve {
             //System.out.println(temp_id.substring(dot,dotdot));
             String tmp = "";
             //tmp = tmp.replaceAll("\\.","");
-            for(int i=0;i<dotdot-dot+1;i++) tmp=tmp+"\\.";
-            System.out.println(tmp);
+            if(dotdot>dot) {
+                for (int i = 0; i < dotdot - dot + 1; i++) tmp = tmp + "\\.";
+                System.out.println(tmp);
+                new_id=temp_id=temp_id.replace(tmp,"!");//new_id.substring(dot,dotdot+1)
+                System.out.println("3단계 해결중"+new_id);
+            }
 
-            new_id=temp_id=temp_id.replaceAll(tmp,"!");//new_id.substring(dot,dotdot+1)
-            System.out.println("3단계 해결중"+new_id);
             //System.out.println("3단계 해결중 temp"+temp_id);
             //System.out.println(temp_id.substring(dotdot+1,temp_id.length()));
             //temp_id=temp_id.substring(dotdot+1,temp_id.length());
