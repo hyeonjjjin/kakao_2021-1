@@ -2,7 +2,7 @@ import java.lang.*;
 
 class Solve {
     public static void main(String[] args) {
-        solution("ab...!eD!..");
+        solution("ab...!eD!....");
     }
     public static String solution(String new_id) {
         String[] delete = {"~","`","!","@","#","\\$","%","\\^","&","\\*","\\(","\\)","\\+","=","\\|","\\\\","\\{","\\}","\\[","\\]",":",";", "\"","'","<",">","\\?","/"};
@@ -28,11 +28,11 @@ class Solve {
             for(int i=0;i<dotdot-dot+1;i++) tmp=tmp+"\\.";
             System.out.println(tmp);
 
-            new_id=temp_id.replaceAll(tmp,"!");//new_id.substring(dot,dotdot+1)
+            new_id=temp_id=temp_id.replaceAll(tmp,"!");//new_id.substring(dot,dotdot+1)
             System.out.println("3단계 해결중"+new_id);
             //System.out.println("3단계 해결중 temp"+temp_id);
-            System.out.println(temp_id.substring(dotdot+1,temp_id.length()));
-            temp_id=temp_id.substring(dotdot+1,temp_id.length());
+            //System.out.println(temp_id.substring(dotdot+1,temp_id.length()));
+            //temp_id=temp_id.substring(dotdot+1,temp_id.length());
             dotdot = dot = temp_id.indexOf('.');
             System.out.println("옦꼐"+dot+" "+dotdot+ " "+ temp_id.length()+temp_id);
         }
