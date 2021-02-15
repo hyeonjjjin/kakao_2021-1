@@ -2,7 +2,7 @@ import java.lang.*;
 
 class Solve {
     public static void main(String[] args) {
-        solution("ab...!eD!....");
+        solution("ab..!e.D!....");
     }
     public static String solution(String new_id) {
         String[] delete = {"~","`","!","@","#","\\$","%","\\^","&","\\*","\\(","\\)","\\+","=","\\|","\\\\","\\{","\\}","\\[","\\]",":",";", "\"","'","<",">","\\?","/"};
@@ -14,33 +14,15 @@ class Solve {
         for (String item : delete) new_id=new_id.replaceAll(item,"");
         System.out.println("2단계 해결"+new_id);
         //3단계
-        int dot=new_id.indexOf('.');
-        int dotdot =dot;
-        String temp_id = new_id+'\0';
-        //String tmp = "";
-        while(dot>0){
-            while(temp_id.charAt(1+dotdot)=='.') {System.out.println("ovo"); dotdot++; }//dotdot++;//{dotdot+=1;}
-            //System.out.println("ovo?");
-            //System.out.println(dotdot);
-            //System.out.println(temp_id.substring(dot,dotdot));
-            String tmp = "";
-            //tmp = tmp.replaceAll("\\.","");
-            if(dotdot>dot) {
-                for (int i = 0; i < dotdot - dot + 1; i++) tmp = tmp + "\\.";
-                System.out.println(tmp);
-                new_id=temp_id=temp_id.replace(tmp,"!");//new_id.substring(dot,dotdot+1)
-                System.out.println("3단계 해결중"+new_id);
-            }
-
-            //System.out.println("3단계 해결중 temp"+temp_id);
-            //System.out.println(temp_id.substring(dotdot+1,temp_id.length()));
-            //temp_id=temp_id.substring(dotdot+1,temp_id.length());
-            dotdot = dot = temp_id.indexOf('.');
-            System.out.println("옦꼐"+dot+" "+dotdot+ " "+ temp_id.length()+temp_id);
+        StringBuffer temp_id= new StringBuffer(new_id+' ');
+        int dot_start = temp_id.indexOf("..");
+        int dot_end = dot_start+1;
+        while(dot_start >0){
+            while(temp_id.charAt(dot_end+1)=='.') {dot_end++;}
+            temp_id=temp_id.delete(dot_start, dot_end);
+            dot_start = temp_id.indexOf("..");
+            dot_end = dot_start+1;
         }
-
-        //new_id=new_id.replaceAll("\\.\\.","\\.");
-
 
 
         System.out.println(new_id);
