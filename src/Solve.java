@@ -2,7 +2,7 @@ import java.lang.*;
 
 class Solve {
     public static void main(String[] args) {
-        solution("ab..!e.D!....");
+        solution(".");
     }
     public static String solution(String new_id) {
         String[] delete = {"~","`","!","@","#","\\$","%","\\^","&","\\*","\\(","\\)","\\+","=","\\|","\\\\","\\{","\\}","\\[","\\]",":",";", "\"","'","<",">","\\?","/"};
@@ -23,8 +23,20 @@ class Solve {
             dot_start = temp_id.indexOf("..");
             dot_end = dot_start+1;
         }
+        //temp_id=temp_id.deleteCharAt(temp_id.length()-1);
+        System.out.println("3단계 해결"+temp_id);
 
+        //4단계
+        if(temp_id.charAt(0)=='.') temp_id=temp_id.deleteCharAt(0);
+        if(temp_id.length()>=2&& temp_id.charAt(temp_id.length()-2)=='.') temp_id=temp_id.deleteCharAt(temp_id.length()-2);
+        System.out.println("4단계 해결"+temp_id);
 
+        //5단계
+        if(temp_id.length()==1) temp_id.append('a');
+        System.out.println("5단계 해결"+temp_id);
+
+        //6단계
+        //if()
         System.out.println(new_id);
         String answer = "";
         return answer;
