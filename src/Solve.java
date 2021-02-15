@@ -2,7 +2,7 @@ import java.lang.*;
 
 class Solve {
     public static void main(String[] args) {
-        solution(".");
+        solution("012345678901234567890123");
     }
     public static String solution(String new_id) {
         String[] delete = {"~","`","!","@","#","\\$","%","\\^","&","\\*","\\(","\\)","\\+","=","\\|","\\\\","\\{","\\}","\\[","\\]",":",";", "\"","'","<",">","\\?","/"};
@@ -31,12 +31,15 @@ class Solve {
         if(temp_id.length()>=2&& temp_id.charAt(temp_id.length()-2)=='.') temp_id=temp_id.deleteCharAt(temp_id.length()-2);
         System.out.println("4단계 해결"+temp_id);
 
-        //5단계
+        //5단계 **앞서 맨 뒤에 ' '을 추가했음을 유의
         if(temp_id.length()==1) temp_id.append('a');
         System.out.println("5단계 해결"+temp_id);
 
-        //6단계
-        //if()
+        //6단계 **앞서 맨 뒤에 ' '을 추가했음을 유의
+        if(temp_id.length()>=17) temp_id=temp_id.delete(15, temp_id.length()-1);
+        System.out.println("6단계 해결"+temp_id);
+
+        //
         System.out.println(new_id);
         String answer = "";
         return answer;
