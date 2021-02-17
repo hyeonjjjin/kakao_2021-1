@@ -2,9 +2,12 @@ import java.lang.*;
 
 class Solve {
     public static void main(String[] args) {
-        solution("-_.~!@#$%^&*()=+[{]}:?,<>/");
+        solution1("-_.~!@#$%^&*()=+[{]}:?,<>/");
+        String[] orders= ["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"];
+        int[] course= [2,3,4];
+        solution2(orders,course);
     }
-    public static String solution(String new_id) {
+    public static String solution1(String new_id) {
         String[] delete = {"~","!","@","#","\\$","%","\\^",",","&","\\*","\\(","\\)","\\+","=","\\\\","\\{","\\}","\\[","\\]",":","<",">","\\?","/"};
         System.out.println(new_id);
         //1단계
@@ -32,5 +35,10 @@ class Solve {
         //7단계
         while(temp_id.length()<3) temp_id.insert(temp_id.length(),temp_id.charAt(temp_id.length()-1));
         return temp_id.toString();
+    }
+
+    public static String[] solution2(String[] orders, int[] course) {
+        String[] answer = {};
+        return answer;
     }
 }
