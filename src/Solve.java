@@ -38,7 +38,6 @@ class Solve {
     }
 
     public static String[] solution2(String[] orders, int[] course) {
-
         String[] answer = {};
         return answer;
     }
