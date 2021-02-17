@@ -3,8 +3,8 @@ import java.lang.*;
 class Solve {
     public static void main(String[] args) {
         solution1("-_.~!@#$%^&*()=+[{]}:?,<>/");
-        String[] orders= ["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"];
-        int[] course= [2,3,4];
+        String[] orders= {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"};
+        int[] course= {2,3,4};
         solution2(orders,course);
     }
     public static String solution1(String new_id) {
@@ -38,6 +38,7 @@ class Solve {
     }
 
     public static String[] solution2(String[] orders, int[] course) {
+
         String[] answer = {};
         return answer;
     }
