@@ -38,6 +38,7 @@ class Solve {
     }
 
     public static String[] solution2(String[] orders, int[] course) {
+        //두 개씩 조합해주는 함수는 없었나 혹쉬...?
         String[] answer = {};
         return answer;
     }
