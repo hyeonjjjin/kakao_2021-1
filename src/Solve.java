@@ -42,4 +42,20 @@ class Solve {
         String[] answer = {};
         return answer;
     }
+    public static String solution1_O(String new_id) {
+        String answer = "";
+        new_id = new_id.toLowerCase();//1단계
+        new_id = new_id.replaceAll("[^-_.a-z0-9]","");//2단계
+        new_id = new_id.replaceAll("[.]{2,}",".");//3단계
+        new_id = new_id.replaceAll("^[.]|[.]$","");//4단계
+        if(new_id.equals("")) new_id+="a";//5단계
+        if(new_id.length() >=16){
+            new_id = new_id.substring(0,15);//6단계
+            new_id = new_id.replaceAll("^[.]|[.]$","");
+        }
+        while(new_id.length()<=2)//7단계
+            new_id+=new_id.charAt(new_id.length()-1);
+        return new_id;
+    }
+
 }
