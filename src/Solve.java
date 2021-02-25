@@ -36,9 +36,14 @@ class Solve {
         while(temp_id.length()<3) temp_id.insert(temp_id.length(),temp_id.charAt(temp_id.length()-1));
         return temp_id.toString();
     }
-
+    //["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"] [2,3,4]
     public static String[] solution2(String[] orders, int[] course) {
         //두 개씩 조합해주는 함수는 없었나 혹쉬...?
+        System.out.println(orders.length);
+        String s = orders[0];
+        System.out.println(s);
+        //String tmp = s[0]+s[1];
+
         String[] answer = {};
         return answer;
     }
