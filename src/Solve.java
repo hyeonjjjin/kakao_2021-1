@@ -3,7 +3,7 @@ import java.lang.*;
 class Solve {
     public static void main(String[] args) {
         System.out.println(solution1("-_.~!@#$%^&*()=+[{]}:?,<>/"));
-        String[] orders= {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"};
+        String[] orders= {"ACFG", "ABC", "CDE", "ACDE", "BCFG", "ACDEH"};
         int[] course= {2,3,4};
         solution2(orders,course);
     }
@@ -39,13 +39,18 @@ class Solve {
     //["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"] [2,3,4]
     public static String[] solution2(String[] orders, int[] course) {
         //두 개씩 조합해주는 함수는 없었나 혹쉬...?
-        System.out.println(orders.length);
+        StringBuffer compare1=new StringBuffer();
+        compare1.append(orders[0].charAt(0));
+        compare1.append(orders[0].charAt(1));
+
+        StringBuffer compare0=new StringBuffer(orders[1]);
+        System.out.println(compare0.indexOf(compare1.toString()));
+        //뭐야 어케하는데
+        //System.out.println(compare);
         //String s = orders[0].charAt(0)+orders[0].charAt(0);
         //idontknow.......
         System.out.println();
         //String tmp = s[0]+s[1];
-
-
 
         String[] answer = {};
         return answer;
