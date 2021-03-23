@@ -71,9 +71,6 @@ class Solve {
         return new_id;
     }
 
-
-
-
     //2018 KAKAO BLIND REQUIREMENT [3차]
     //level2
     public static String solution(int n, int t, int m, int p) {
